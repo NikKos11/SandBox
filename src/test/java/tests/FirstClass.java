@@ -13,10 +13,6 @@ public class FirstClass extends BaseTest {
         loginPage.login();
         boolean productsBtnPresent = browser.findElement(By.xpath("//*[span='Products']")).isDisplayed();
         assertTrue(productsBtnPresent);
-//        browser.findElement(By.xpath("//input[@name = 'zip_code']")).sendKeys(Keys.CONTROL + "A");
-//        browser.findElement(By.xpath("//input[@name = 'zip_code']")).sendKeys(Keys.BACK_SPACE);
-//        browser.findElement(By.cssSelector("input[name = 'zip_code']"));
-//        browser.findElement(By.name("zip_code"));
     }
 
     @Test
@@ -27,8 +23,3 @@ public class FirstClass extends BaseTest {
     }
 
 }
-
-//        Alert alert = browser.switchTo().alert();
-//        alert.accept();
-//        browser.switchTo().frame("");
-//        browser.switchTo().defaultContent();

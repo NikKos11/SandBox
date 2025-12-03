@@ -19,8 +19,6 @@ public class BaseTest {
         options.addArguments("start-maximized");
         options.addArguments("--guest");
         browser = new ChromeDriver(options);
-//        options.addArguments("headless")
-//        options.addArguments("window-size=1920, 1080")
         browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
         loginPage = new LoginPage(browser);
     }

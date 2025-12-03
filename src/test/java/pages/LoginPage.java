@@ -17,7 +17,6 @@ public class LoginPage {
 
     public LoginPage(WebDriver browser) {
         this.browser = browser;
-//        this.wait = wait;
     }
 
     public void open() {
@@ -28,7 +27,6 @@ public class LoginPage {
         browser.findElement(USER_NAME).sendKeys("standard_user");
         browser.findElement(PASSWORD).sendKeys("secret_sauce");
         browser.findElement(LOGIN).click();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".error_message")));
     }
 
     public String checkErrorMsg() {
@@ -36,7 +34,7 @@ public class LoginPage {
         browser.findElement(PASSWORD).sendKeys("123456");
         browser.findElement(LOGIN).click();
         WebDriverWait wait = new WebDriverWait(browser, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div#login_button_container > div > form > div:nth-of-type(3) > h3")));
-        return browser.findElement(By.cssSelector("div#login_button_container > div > form > div:nth-of-type(3) > h3")).getText();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[h3]")));
+        return browser.findElement(By.xpath("//*[h3]")).getText();
     }
 }
