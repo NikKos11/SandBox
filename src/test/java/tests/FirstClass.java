@@ -8,7 +8,7 @@ import static org.testng.Assert.assertTrue;
 
 public class FirstClass extends BaseTest {
     private static final By TEXT_CHECK = By.xpath("//*[span='Products']");
-    private static final String TEXTMSG = "Epic sadface: Username and password do not match any user in this service";
+    private static final String TEXT_MSG = "Epic sadface: Username and password do not match any user in this service";
 
     @Test
     public void logPass() {
@@ -22,7 +22,7 @@ public class FirstClass extends BaseTest {
     public void logFailed() {
         loginPage.open();
         loginPage.checkErrorMsg();
-        assertEquals(loginPage.checkErrorMsg(), TEXTMSG);
+        assertEquals(loginPage.checkErrorMsg(), TEXT_MSG);
     }
 
 }
